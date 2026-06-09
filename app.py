@@ -130,8 +130,18 @@ st.session_state.messages = current_chat["messages"]
 if "chat_input" not in st.session_state:
     st.session_state.chat_input = ""
 
-# Try to get API key from environment variable
-env_api_key = os.environ.get("GROQ_API_KEY", "")
+# Try to get API key from Streamlit secrets or OS environment variable
+env_api_key = ""
+try:
+    if "GROQ_API_KEY" in st.secrets:
+        env_api_key = st.secrets["GROQ_API_KEY"]
+    elif "groq_api_key" in st.secrets:
+        env_api_key = st.secrets["groq_api_key"]
+except Exception:
+    pass
+
+if not env_api_key:
+    env_api_key = os.environ.get("GROQ_API_KEY", os.environ.get("groq_api_key", ""))
 
 with st.sidebar:
     # Title Header (Mockup)
