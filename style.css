@@ -1,0 +1,413 @@
+/* Import premium Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* Global Style Overrides */
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #f3f4f6 !important;
+    font-family: 'Inter', sans-serif !important;
+    color: #1f2937 !important;
+}
+
+/* Custom fonts for Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    color: #1e3a8a !important;
+}
+
+/* Sidebar Styling - Clean White Background */
+[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e5e7eb !important;
+}
+
+/* Sidebar Title and Text styles */
+.sidebar-header {
+    font-family: 'Outfit', sans-serif;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Sidebar Label custom styling (Blue text as in screenshot) */
+div[data-testid="stSidebar"] label {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* Llama 3 Green Pill/Badge in Sidebar */
+.llama-badge {
+    background-color: #ecfdf5 !important;
+    color: #059669 !important;
+    border: 1px solid #a7f3d0 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 1.5rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Cards (White containers with soft shadows) */
+.card-container {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+}
+
+.card-title {
+    color: #2563eb !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.75rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Customization for all buttons (Light/Clean Style) */
+.stButton>button {
+    background-color: #ffffff !important;
+    color: #374151 !important; /* Dark gray text */
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-family: 'Outfit', sans-serif !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+}
+
+.stButton>button:hover {
+    background-color: #f9fafb !important;
+    color: #111827 !important;
+    border-color: #9ca3af !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Clear Chat History button (Sidebar) style overrides */
+div[data-testid="stSidebar"] .stButton>button {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    color: #4b5563 !important;
+    box-shadow: none !important;
+    margin-top: 2rem !important;
+}
+
+div[data-testid="stSidebar"] .stButton>button:hover {
+    background: #f9fafb !important;
+    border-color: #9ca3af !important;
+    color: #1f2937 !important;
+}
+
+/* Dropdowns and select boxes styling */
+div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+}
+
+div[data-baseweb="select"]:hover {
+    border-color: #3b82f6 !important;
+}
+
+/* Text area input styling */
+div[data-testid="stTextArea"] textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    color: #1f2937 !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
+}
+
+div[data-testid="stTextArea"] textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Chat Output Bubble styling (Light Theme) */
+.output-bubble-user {
+    background: #0f172a !important; /* Dark Navy Blue */
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    color: #ffffff !important; /* White text */
+    margin-bottom: 0.75rem !important;
+}
+
+.output-bubble-assistant {
+    background: #ffffff !important; /* White bot bubbles */
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 1.25rem !important;
+    color: #1f2937 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Chat Header Card (Dark Teal/Dark Cyan background) */
+.chat-header-card {
+    background: linear-gradient(135deg, #0f766e 0%, #115e59 100%) !important; /* Dark Teal/Cyan */
+    color: #ffffff !important;
+    padding: 15px 20px !important;
+    border-radius: 10px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15) !important;
+}
+
+.chat-header-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin-bottom: 2px !important;
+}
+
+.chat-header-subtitle {
+    font-size: 0.85rem !important;
+    color: #ccfbf1 !important; /* light teal accent */
+    opacity: 0.9 !important;
+}
+
+/* Main title styling */
+.main-title {
+    font-family: 'Outfit', sans-serif;
+    color: #1e3a8a;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* Customizing Streamlit Tabs */
+button[data-baseweb="tab"] {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    color: #4b5563 !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #2563eb !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Custom wrappers for sidebar buttons */
+.new-chat-btn .stButton>button {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.new-chat-btn .stButton>button:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+}
+
+.chat-thread-btn .stButton>button {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    color: #4b5563 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.25rem !important;
+    margin-top: 0px !important;
+    box-shadow: none !important;
+}
+
+.chat-thread-btn .stButton>button:hover {
+    background: #f9fafb !important;
+    border-color: #cbd5e1 !important;
+    color: #1f2937 !important;
+}
+
+.chat-thread-btn-active .stButton>button {
+    background: #eff6ff !important;
+    border: 1px solid #bfdbfe !important;
+    color: #1e3a8a !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.25rem !important;
+    margin-top: 0px !important;
+    box-shadow: none !important;
+}
+
+.chat-thread-btn-active .stButton>button:hover {
+    background: #eff6ff !important;
+    border-color: #bfdbfe !important;
+    color: #1e3a8a !important;
+}
+
+/* Circular popover button styling matching ChatGPT style */
+.stPopover button {
+    background-color: #f3f4f6 !important;
+    color: #4b5563 !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.25rem !important;
+    padding: 0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    transition: all 0.2s ease !important;
+    margin-top: 4px !important;
+}
+
+.stPopover button:hover {
+    background-color: #e5e7eb !important;
+    color: #1f2937 !important;
+    border-color: #cbd5e1 !important;
+    transform: scale(1.05);
+}
+
+/* Sticky chat bar container fixed at the bottom of the viewport */
+div[class*="st-key-sticky-chat-bar"] {
+    position: fixed !important;
+    bottom: 0px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 820px !important;
+    background-color: #f3f4f6 !important; /* blends with the light page background */
+    padding: 10px 15px 20px 15px !important;
+    z-index: 99999 !important;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.02) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Align columns inside the sticky container vertically */
+div[class*="st-key-sticky-chat-bar"] [data-testid="column"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Add padding, background, rounded corners and shadow to the main chat workspace container */
+.main .block-container {
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    margin-top: 30px !important;
+    padding: 30px 35px 170px 35px !important;
+}
+
+/* Assistant bubble wrapper and actions layout */
+.assistant-bubble-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bubble-actions {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px 10px;
+    margin-top: -6px;
+    margin-bottom: 15px;
+}
+
+/* Copy button styled like ChatGPT */
+.copy-btn {
+    background: transparent !important;
+    border: none !important;
+    color: #8e8ea0 !important; /* Cool gray icon color */
+    font-size: 0.72rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    font-family: inherit !important;
+}
+
+.copy-btn:hover {
+    background-color: #e5e7eb !important; /* subtle gray hover */
+    color: #1f2937 !important;
+}
+
+.copy-btn.copied {
+    color: #10b981 !important; /* Green color when copied successfully */
+}
+
+.copy-icon {
+    font-size: 0.85rem !important;
+}
+
+/* Sidebar Thread Delete/Clear button styling */
+.chat-thread-del .stButton>button {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    color: #9ca3af !important; /* Muted gray delete icon by default */
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.5rem 0px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.25rem !important;
+    margin-top: 0px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.chat-thread-del .stButton>button:hover {
+    background: #fee2e2 !important; /* Soft red hover */
+    border-color: #fca5a5 !important;
+    color: #ef4444 !important;
+}
+
+
+
+
